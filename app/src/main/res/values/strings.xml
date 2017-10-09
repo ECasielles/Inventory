@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Inventory</string>
+    <string name="txvSignIn">Acceder</string>
+    <string name="txvSignUp">Registro</string>
+    <string name="btnSignIn">Acceder</string>
+    <string name="btnGoogleSignIn">Google</string>
+    <string name="btnFacebookSignIn">Acceder con Facebook</string>
+    <string name="txvPassword">Contraseña</string>
+    <string name="txvUser">Nombre usuario o email</string>
+    <string name="chkRemember">Recordar usuario</string>
+    <string name="logo" translatable="false">Logo</string>
+    <string name="txvName">Nombre</string>
+    <string name="txvDescription">Descripción</string>
+    <string name="btnStatus">Cambio de estado</string>
+    <string name="txvCreationDate">Fecha de creación</string>
+</resources>
