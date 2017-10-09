@@ -5,19 +5,19 @@ import android.os.Bundle;
 
 
 /**
- * Actividad pantalla de llegada de la aplicación.
+ * Actividad que maneja los distintos inventarios.
  *
  * @author Enrique Casielles Lapeira
- * @version 2.0
+ * @version 1.0
  * @see android.app.Activity
  * @see AppCompatActivity
  */
 
-public class SplashActivity extends AppCompatActivity {
+public class DashboardActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_dashboard);
     }
 }

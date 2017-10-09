@@ -32,11 +32,10 @@
         <item name="android:padding">10dp</item>
     </style>
 
-    <!-- Arreglar el estilo personalizado del checkbox a gris -->
+    <!-- El color del checkbox cuando se activa pasa a ser colorAccent -->
     <style name="Widget.CompoundButton" parent="@android:style/Widget.CompoundButton.CheckBox"/>
     <style name="Widget.CompoundButton.Checkbox" parent="@android:style/Widget.CompoundButton.CheckBox">
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:button">@color/chkColorGray</item>
     </style>
 
 </resources>

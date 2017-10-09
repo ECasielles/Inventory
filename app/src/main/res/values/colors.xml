@@ -2,9 +2,8 @@
 <resources>
     <color name="colorPrimary">#82b1ff</color>
     <color name="colorPrimaryDark">#4d82cb</color>
-    <color name="colorAccent">#7986cb</color>
+    <color name="colorAccent">#9e9e9e</color>
     <color name="colorGoogle">#e25f43</color>
     <color name="colorFacebook">#3b5998</color>
     <color name="colorPrimaryLogin">#FFFFFF</color>
-    <color name="chkColorGray">#aaaaaa</color>
 </resources>

@@ -72,6 +72,7 @@
             android:text="@string/chkRemember"
             android:layout_weight="0.8"
             style="@style/Widget.CompoundButton.Checkbox"
+
             />
 
         <TextView
@@ -120,5 +121,6 @@
         android:text="@string/btnFacebookSignIn"
         style="@style/Widget.Button.Transparent"
         />
+
 
 </LinearLayout>
