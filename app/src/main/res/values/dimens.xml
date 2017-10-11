@@ -6,4 +6,6 @@
     <dimen name="btnSignIn_margin">72dp</dimen>
     <dimen name="llo_Sign_Options_padding">8dp</dimen>
     <dimen name="btnGoogleSign_margin">8dp</dimen>
+    <dimen name="imgDashboardWidth">0dp</dimen>
+    <dimen name="imgDashboardHeight">0dp</dimen>
 </resources>

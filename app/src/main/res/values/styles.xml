@@ -12,6 +12,10 @@
         <item name="android:textColor">@color/colorPrimaryLogin</item>
     </style>
 
+    <style name="LoginTheme.CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:color">@android:color/darker_gray</item>
+    </style>
+
     <!--
         Defino el padre primero, heredando de Widget y haciendo referencia al SDK.
         Puedo mantener la misma estructura y anular un atributo o no definirlo.

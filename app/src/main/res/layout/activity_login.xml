@@ -72,7 +72,6 @@
             android:text="@string/chkRemember"
             android:layout_weight="0.8"
             style="@style/Widget.CompoundButton.Checkbox"
-
             />
 
         <TextView
