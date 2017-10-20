@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.usuario.inventory">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.usuario.inventory"
+    >
 
     <application
         android:allowBackup="true"
@@ -25,6 +25,8 @@
         </activity>
         <activity android:name=".InventoryActivity"/>
         <activity android:name=".DashboardActivity"/>
+        <activity android:name=".ProductActivity">
+        </activity>
     </application>
 
 </manifest>

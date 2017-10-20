@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.usuario.inventory.ProductActivity"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="0dp"
+            android:layout_height="118dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/producto"
+            />
+
+        <TextView
+            android:id="@+id/txvName"
+            android:layout_width="0dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/txvName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView12"
+            />
+
+        <EditText
+            android:id="@+id/edtProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:ems="10"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvName"
+            app:layout_constraintStart_toEndOf="@+id/txvName"
+            />
+
+        <TextView
+            android:id="@+id/txvSerialNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/txvSerialNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvName"
+            />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvSerialNumber"
+            app:layout_constraintStart_toStartOf="@+id/edtProductName"
+            />
+
+        <TextView
+            android:id="@+id/txvVendor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/txvVendor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvSerialNumber"
+            />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvVendor"
+            app:layout_constraintStart_toStartOf="@+id/editText"
+            />
+
+        <TextView
+            android:id="@+id/txvModelCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/txvModelCode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvVendor"
+            />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvModelCode"
+            app:layout_constraintStart_toStartOf="@+id/editText2"
+            />
+
+        <TextView
+            android:id="@+id/txvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/txvCategory"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvModelCode"
+            />
+
+        <ExpandableListView
+            android:id="@+id/elvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txvModelCode"
+            app:layout_constraintStart_toStartOf="@+id/editText2"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txvPeripheral"
+                />
+        </ExpandableListView>
+
+        <TextView
+            android:id="@+id/txvSubCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/txvSubCategory"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvCategory"
+            />
+
+        <TextView
+            android:id="@+id/txvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/txvType"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvSubCategory"
+            />
+
+        <TextView
+            android:id="@+id/txvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/txvDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvType"
+            />
+
+        <EditText
+            android:id="@+id/editText7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            tools:layout_editor_absoluteX="116dp"
+            tools:layout_editor_absoluteY="478dp"
+            />
+
+        <TextView
+            android:id="@+id/txvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/txvPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvDescription"
+            />
+
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintTop_toBottomOf="@+id/editText7"
+            tools:layout_editor_absoluteX="116dp"
+            />
+
+        <TextView
+            android:id="@+id/txvAcquisitionDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/txvAcquisitionDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvPrice"
+            />
+
+        <EditText
+            android:id="@+id/editText9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintTop_toBottomOf="@+id/editText8"
+            tools:layout_editor_absoluteX="116dp"
+            />
+
+        <TextView
+            android:id="@+id/txvProductInfoURL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/txvProductInfoURL"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvAcquisitionDate"
+            />
+
+        <EditText
+            android:id="@+id/editText10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintTop_toBottomOf="@+id/editText9"
+            tools:layout_editor_absoluteX="116dp"
+            />
+
+        <TextView
+            android:id="@+id/txvNotes"
+            android:layout_width="54dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/txvNotes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvProductInfoURL"
+            />
+
+        <EditText
+            android:id="@+id/editText11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintTop_toBottomOf="@+id/editText10"
+            tools:layout_editor_absoluteX="116dp"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

@@ -10,8 +10,18 @@
     <string name="txvUser">Nombre usuario o email</string>
     <string name="chkRemember">Recordar usuario</string>
     <string name="logo" translatable="false">Logo</string>
-    <string name="txvName">Nombre</string>
-    <string name="txvDescription">Descripción</string>
-    <string name="btnStatus">Cambio de estado</string>
     <string name="txvCreationDate">Fecha de creación</string>
+    <string name="txvName">Nombre</string>
+    <string name="txvSerialNumber">Serial</string>
+    <string name="txvVendor">Vendedor</string>
+    <string name="txvModelCode">Modelo</string>
+    <string name="txvCategory">Categoría</string>
+    <string name="txvSubCategory">Subcategoría</string>
+    <string name="txvType">Tipo</string>
+    <string name="txvDescription">Descripción</string>
+    <string name="txvPrice">Precio</string>
+    <string name="txvAcquisitionDate">F. compra</string>
+    <string name="txvProductInfoURL">URL</string>
+    <string name="txvNotes">Notas</string>
+    <string name="txvPeripheral">Periférico</string>
 </resources>

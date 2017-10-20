@@ -1,14 +1,11 @@
 package com.example.usuario.inventory;
 
-import android.media.Image;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayout;
+import android.view.View;
 import android.widget.ImageView;
-
-import java.util.ArrayList;
-import java.util.Vector;
-
 
 /**
  * Actividad que muestra los distintos inventarios y sus iconos.
@@ -22,21 +19,24 @@ import java.util.Vector;
 public class DashboardActivity extends AppCompatActivity {
 
     private GridLayout gdlDashboard;
+    private ClickListenerDashboard listenerDashboard;
+
+
+    int[] images = {
+            R.drawable.inventario,
+            R.drawable.producto,
+            R.drawable.dependencias,
+            R.drawable.seccion,
+            R.drawable.preferencias
+    };
 
     //Especificando con LayoutParams: Fila, columna, espaciado y peso.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+        setContentView(R.layout.activity_dashboard_support);
         gdlDashboard = (GridLayout) findViewById(R.id.gdlDashboard);
-
-        //Defino un array de int con los id de las imágenes
-        int[] images = {
-                R.drawable.chair, R.drawable.closet, R.drawable.cpu,
-                R.drawable.inventory, R.drawable.keyboard, R.drawable.monitor,
-                R.drawable.mouse, R.drawable.printer, R.drawable.proyector,
-                R.drawable.table, R.drawable.whiteboard
-        };
+        listenerDashboard = new ClickListenerDashboard();
 
         //Definir un array de ImageView
 
@@ -64,8 +64,12 @@ public class DashboardActivity extends AppCompatActivity {
         ImageView imageView;
         GridLayout.LayoutParams params;
 
+        //Creamos los elementos de forma dinámica
         for (int i = 0; i < images.length; i++) {
             imageView = new ImageView(this);
+
+            //Asigna Id y recurso al ImageView
+            imageView.setId(images[i]);
             imageView.setImageResource(images[i]);
 
             params = new GridLayout.LayoutParams();
@@ -74,7 +78,27 @@ public class DashboardActivity extends AppCompatActivity {
             params.rowSpec = GridLayout.spec(GridLayout.UNDEFINED, GridLayout.FILL, 1f);
             params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, GridLayout.FILL, 1f);
             imageView.setLayoutParams(params);
+            imageView.setOnClickListener(new ClickListenerDashboard());
             gdlDashboard.addView(imageView);
         }
     }
+
+    class ClickListenerDashboard implements View.OnClickListener{
+
+        @Override
+        public void onClick(View v) {
+            Intent intent = null;
+            switch (v.getId()){
+                case R.drawable.inventario:
+                    intent = new Intent(DashboardActivity.this, InventoryActivity.class);
+                    break;
+                case R.drawable.producto:
+                    intent = new Intent(DashboardActivity.this, ProductActivity.class);
+                    break;
+            }
+            startActivity(intent);
+        }
+
+    }
+
 }
