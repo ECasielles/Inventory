@@ -12,7 +12,7 @@
     <string name="logo" translatable="false">Logo</string>
     <string name="txvCreationDate">Fecha de creación</string>
     <string name="txvName">Nombre</string>
-    <string name="txvSerialNumber">Serial</string>
+    <string name="txvSerial">Serial</string>
     <string name="txvVendor">Vendedor</string>
     <string name="txvModelCode">Modelo</string>
     <string name="txvCategory">Categoría</string>

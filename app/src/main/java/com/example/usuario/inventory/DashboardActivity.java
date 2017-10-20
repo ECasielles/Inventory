@@ -77,9 +77,9 @@ public class DashboardActivity extends AppCompatActivity {
             params.height = (int) height;
             params.rowSpec = GridLayout.spec(GridLayout.UNDEFINED, GridLayout.FILL, 1f);
             params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, GridLayout.FILL, 1f);
-            imageView.setLayoutParams(params);
+            //imageView.setLayoutParams(params);
             imageView.setOnClickListener(new ClickListenerDashboard());
-            gdlDashboard.addView(imageView);
+            gdlDashboard.addView(imageView, params);
         }
     }
 
