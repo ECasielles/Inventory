@@ -7,6 +7,8 @@ import android.support.v7.widget.GridLayout;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.usuario.inventory.pojo.Dependency;
+
 /**
  * Actividad que muestra los distintos inventarios y sus iconos.
  *
@@ -29,6 +31,13 @@ public class DashboardActivity extends AppCompatActivity {
             R.drawable.seccion,
             R.drawable.preferencias
     };
+
+    static final int INVENTARIO = View.generateViewId();
+    static final int PRODUCTO = View.generateViewId();
+    static final int DEPENDENCIAS = View.generateViewId();
+    static final int SECCION = View.generateViewId();
+    static final int PREFERENCIAS = View.generateViewId();
+
 
     //Especificando con LayoutParams: Fila, columna, espaciado y peso.
     @Override
@@ -85,6 +94,7 @@ public class DashboardActivity extends AppCompatActivity {
 
     class ClickListenerDashboard implements View.OnClickListener{
 
+        //Cambiar switch por columna de if para usar View.generateViewId() y setId().
         @Override
         public void onClick(View v) {
             Intent intent = null;
@@ -94,6 +104,9 @@ public class DashboardActivity extends AppCompatActivity {
                     break;
                 case R.drawable.producto:
                     intent = new Intent(DashboardActivity.this, ProductActivity.class);
+                    break;
+                case R.drawable.dependencias:
+                    intent = new Intent(DashboardActivity.this, DependencyActivity.class);
                     break;
             }
             startActivity(intent);
