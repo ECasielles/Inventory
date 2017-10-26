@@ -49,6 +49,6 @@ public class Dependency {
 
     @Override
     public String toString() {
-        return ", shortname='" + shortname;
+        return shortname;
     }
 }

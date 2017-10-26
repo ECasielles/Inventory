@@ -9,6 +9,9 @@ import android.widget.ImageView;
 
 import com.example.usuario.inventory.pojo.Dependency;
 
+import java.util.Dictionary;
+import java.util.HashMap;
+
 /**
  * Actividad que muestra los distintos inventarios y sus iconos.
  *
@@ -21,8 +24,6 @@ import com.example.usuario.inventory.pojo.Dependency;
 public class DashboardActivity extends AppCompatActivity {
 
     private GridLayout gdlDashboard;
-    private ClickListenerDashboard listenerDashboard;
-
 
     int[] images = {
             R.drawable.inventario,
@@ -32,12 +33,8 @@ public class DashboardActivity extends AppCompatActivity {
             R.drawable.preferencias
     };
 
-    static final int INVENTARIO = View.generateViewId();
-    static final int PRODUCTO = View.generateViewId();
-    static final int DEPENDENCIAS = View.generateViewId();
-    static final int SECCION = View.generateViewId();
-    static final int PREFERENCIAS = View.generateViewId();
-
+    //Buscar una forma más elegante de hacerlo
+    HashMap<String, Integer> imgsId = new HashMap<>();
 
     //Especificando con LayoutParams: Fila, columna, espaciado y peso.
     @Override
@@ -45,7 +42,20 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_support);
         gdlDashboard = (GridLayout) findViewById(R.id.gdlDashboard);
-        listenerDashboard = new ClickListenerDashboard();
+
+        final int INVENTARIO = View.generateViewId();
+        final int PRODUCTO = View.generateViewId();
+        final int DEPENDENCIAS = View.generateViewId();
+        final int SECCION = View.generateViewId();
+        final int PREFERENCIAS = View.generateViewId();
+
+        int[] viewIds = {
+                INVENTARIO,
+                PRODUCTO,
+                DEPENDENCIAS,
+                SECCION,
+                PREFERENCIAS
+        };
 
         //Definir un array de ImageView
 
@@ -78,7 +88,7 @@ public class DashboardActivity extends AppCompatActivity {
             imageView = new ImageView(this);
 
             //Asigna Id y recurso al ImageView
-            imageView.setId(images[i]);
+            imageView.setId(viewIds[i]);
             imageView.setImageResource(images[i]);
 
             params = new GridLayout.LayoutParams();
@@ -87,31 +97,23 @@ public class DashboardActivity extends AppCompatActivity {
             params.rowSpec = GridLayout.spec(GridLayout.UNDEFINED, GridLayout.FILL, 1f);
             params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, GridLayout.FILL, 1f);
             //imageView.setLayoutParams(params);
-            imageView.setOnClickListener(new ClickListenerDashboard());
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = null;
+
+                    if(v.getId() == INVENTARIO)
+                        intent = new Intent(DashboardActivity.this, InventoryActivity.class);
+                    if(v.getId() == PRODUCTO)
+                        intent = new Intent(DashboardActivity.this, ProductActivity.class);
+                    if(v.getId() == DEPENDENCIAS)
+                        intent = new Intent(DashboardActivity.this, DependencyActivity.class);
+
+                    if (intent != null) startActivity(intent);
+                }
+            });
             gdlDashboard.addView(imageView, params);
         }
-    }
-
-    class ClickListenerDashboard implements View.OnClickListener{
-
-        //Cambiar switch por columna de if para usar View.generateViewId() y setId().
-        @Override
-        public void onClick(View v) {
-            Intent intent = null;
-            switch (v.getId()){
-                case R.drawable.inventario:
-                    intent = new Intent(DashboardActivity.this, InventoryActivity.class);
-                    break;
-                case R.drawable.producto:
-                    intent = new Intent(DashboardActivity.this, ProductActivity.class);
-                    break;
-                case R.drawable.dependencias:
-                    intent = new Intent(DashboardActivity.this, DependencyActivity.class);
-                    break;
-            }
-            startActivity(intent);
-        }
-
     }
 
 }
