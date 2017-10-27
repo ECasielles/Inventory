@@ -26,11 +26,11 @@ public class DashboardActivity extends AppCompatActivity {
     private GridLayout gdlDashboard;
 
     int[] images = {
-            R.drawable.inventario,
-            R.drawable.producto,
-            R.drawable.dependencias,
-            R.drawable.seccion,
-            R.drawable.preferencias
+            R.drawable.ic_format_list_bulleted_type,
+            R.drawable.ic_archive,
+            R.drawable.ic_map_marker_multiple,
+            R.drawable.ic_locker_multiple,
+            R.drawable.ic_format_indent_increase
     };
 
     //Buscar una forma más elegante de hacerlo

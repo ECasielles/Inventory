@@ -9,6 +9,7 @@
     <string name="txvPassword">Contraseña</string>
     <string name="txvUser">Nombre usuario o email</string>
     <string name="chkRemember">Recordar usuario</string>
+    <string name="btnStatus">Cambiar estadoChange status</string>
     <string name="logo" translatable="false">Logo</string>
     <string name="txvCreationDate">Fecha de creación</string>
     <string name="txvName">Nombre</string>

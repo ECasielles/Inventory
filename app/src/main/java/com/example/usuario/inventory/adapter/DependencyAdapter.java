@@ -68,7 +68,7 @@ public class DependencyAdapter extends ArrayAdapter<Dependency>{
 
 
             //3. Inicializar las variables a los objetos ya creados de los widget del xml.
-            dependencyHolder.icon = (MaterialLetterIcon) view.findViewById(R.id.mliIcon);
+            dependencyHolder.mliIcon = (MaterialLetterIcon) view.findViewById(R.id.mliIcon);
             dependencyHolder.txvName = (TextView) view.findViewById(R.id.txvElementName);
             dependencyHolder.txvShortName = (TextView) view.findViewById(R.id.txvElementShortName);
 
@@ -83,7 +83,7 @@ public class DependencyAdapter extends ArrayAdapter<Dependency>{
         }
 
         //4. Mostrar los datos del ArrayList mediante position.
-        dependencyHolder.icon.setLetter(getItem(position).getShortname().substring(0, 1));
+        dependencyHolder.mliIcon.setLetter(getItem(position).getShortname().substring(0, 1));
         dependencyHolder.txvName.setText(getItem(position).getName());
         dependencyHolder.txvShortName.setText(getItem(position).getShortname());
 
@@ -91,9 +91,8 @@ public class DependencyAdapter extends ArrayAdapter<Dependency>{
     }
 
     class DependencyHolder {
-        MaterialLetterIcon icon;
+        MaterialLetterIcon mliIcon;
         TextView txvName, txvShortName;
-
     }
 
 }

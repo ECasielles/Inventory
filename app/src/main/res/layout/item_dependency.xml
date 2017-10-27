@@ -6,8 +6,11 @@
     android:layout_height="match_parent"
     xmlns:tool="http://schemas.android.com/tools"
     >
-    <!--Importando MaterialLetterIcon de
-    https://github.com/IvBaranov/MaterialLetterIcon-->
+    <!--
+    Importando MaterialLetterIcon de
+    https://github.com/IvBaranov/MaterialLetterIcon
+    -->
+
     <com.github.ivbaranov.mli.MaterialLetterIcon
         android:id="@+id/mliIcon"
         android:layout_width="@dimen/letter_icon_size"

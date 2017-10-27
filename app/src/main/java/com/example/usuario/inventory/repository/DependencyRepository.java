@@ -28,7 +28,6 @@ public class DependencyRepository {
     static {
         dependencyRepository = new DependencyRepository();
     }
-
     /**
      * Constructor privado que garantiza una instancia única de la clase
      */
@@ -48,7 +47,6 @@ public class DependencyRepository {
         addDependency(new Dependency(2, "2º Ciclo Formativo Grado Superior",
                 "2CFGS", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
     }
-
     /**
      * Accesor de la clase DependencyRepository
      * @return Devuelve la instancia de la clase como objeto DependencyRepository
@@ -59,7 +57,6 @@ public class DependencyRepository {
             dependencyRepository = new DependencyRepository();*/
         return dependencyRepository;
     }
-
     /**
      * Método que añade una dependencia
      * @param dependency Dependencia de clase Dependency
@@ -67,7 +64,6 @@ public class DependencyRepository {
     private void addDependency(Dependency dependency) {
         dependencies.add(dependency);
     }
-
     /**
      * Devuelve la referencia al objeto
      * @return referencia al objeto ArrayList

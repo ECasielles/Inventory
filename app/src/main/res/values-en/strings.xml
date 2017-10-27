@@ -9,8 +9,20 @@
     <string name="txvPassword">Password</string>
     <string name="txvUser">Username or email</string>
     <string name="chkRemember">Remember username</string>
-    <string name="txvName">Name</string>
-    <string name="txvDescription">Descrition</string>
     <string name="btnStatus">Change status</string>
+
     <string name="txvCreationDate">Creation date</string>
+    <string name="txvName">Name</string>
+    <string name="txvSerial">Serial number</string>
+    <string name="txvVendor">Vendor</string>
+    <string name="txvModelCode">Model</string>
+    <string name="txvCategory">Category</string>
+    <string name="txvSubCategory">Subcategory</string>
+    <string name="txvType">Type</string>
+    <string name="txvDescription">Descrition</string>
+    <string name="txvPrice">Price</string>
+    <string name="txvAcquisitionDate">Acq. date</string>
+    <string name="txvProductInfoURL">URL</string>
+    <string name="txvNotes">Notes</string>
+    <string name="txvPeripheral">Peripheral</string>
 </resources>

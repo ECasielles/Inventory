@@ -20,7 +20,8 @@ import com.example.usuario.inventory.pojo.Dependency;
  */
 public class DependencyActivity extends ListActivity {
 
-    private ArrayAdapter<Dependency> adapter;
+    //private ArrayAdapter<Dependency> adapter;
+    private DependencyAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +32,10 @@ public class DependencyActivity extends ListActivity {
         setContentView(R.layout.activity_dependency);
 
         //CASO 1: Adapter no personalizado
-        /*adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
-                DependencyRepository.getInstance().getDependencies());*/
+        /*
+            adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
+            DependencyRepository.getInstance().getDependencies());
+        */
 
         //CASO 2: Adapter personalizado
         adapter = new DependencyAdapter(this);
