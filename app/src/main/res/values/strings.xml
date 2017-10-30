@@ -25,4 +25,7 @@
     <string name="txvProductInfoURL">URL</string>
     <string name="txvNotes">Notas</string>
     <string name="txvPeripheral">Periférico</string>
+    <string name="txvId">Id</string>
+    <string name="txvSectorDefault">Default</string>
+    <string name="menuTitle">Guardar</string>
 </resources>

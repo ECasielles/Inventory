@@ -1,6 +1,7 @@
 package com.example.usuario.inventory.pojo;
 
 /**
+ * Clase POJO que representa una dependencia
  *
  * @author Enrique Casielles
  * @version 1.0

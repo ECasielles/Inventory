@@ -108,6 +108,8 @@ public class DashboardActivity extends AppCompatActivity {
                         intent = new Intent(DashboardActivity.this, ProductActivity.class);
                     if(v.getId() == DEPENDENCIAS)
                         intent = new Intent(DashboardActivity.this, DependencyActivity.class);
+                    if(v.getId() == SECCION)
+                        intent = new Intent(DashboardActivity.this, SectorActivity.class);
 
                     if (intent != null) startActivity(intent);
                 }
