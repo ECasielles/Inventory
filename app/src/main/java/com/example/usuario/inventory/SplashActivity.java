@@ -12,7 +12,6 @@ import android.os.Bundle;
  * @see android.app.Activity
  * @see AppCompatActivity
  */
-
 public class SplashActivity extends AppCompatActivity {
 
     @Override

@@ -4,9 +4,9 @@
     >
     <!--Importante: El atributo showAsAction es de app-->
     <item
-        android:id="@+id/menuSave"
-        android:icon="@drawable/ic_save"
-        android:title="@string/menuTitle"
+        android:id="@+id/action_menuSave"
         app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_menu_save"
+        android:title="@string/action_save"
         />
 </menu>

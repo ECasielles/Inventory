@@ -15,7 +15,6 @@ import java.util.ArrayList;
  * @see ArrayList
  * @see Dependency
  */
-
 //IMPORTANTE: Comprobar en el manifest que está name:.InventoryApplication
 public class InventoryApplication extends Application {
 

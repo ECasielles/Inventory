@@ -6,7 +6,6 @@ package com.example.usuario.inventory.pojo;
  * @author Enrique Casielles
  * @version 1.0
  */
-
 public class Dependency {
     private int _ID;
     private String name;

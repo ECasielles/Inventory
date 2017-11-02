@@ -39,23 +39,24 @@ public class SectorAdapter extends RecyclerView.Adapter<SectorAdapter.SectorView
 
     /**
      * Constructor de SectorAdapter. Inicializa el array desde SectorRepository.
-     * Se llama cuando SectorActivity se haya recreado desde un cambio de configuración,
-     * habiendo salvado su estado dinámico.
-     * @param modifiedSectors ArrayList de objetos Parcelable
-     */
-    public SectorAdapter(ArrayList<Parcelable> modifiedSectors) {
-        sectors = SectorRepository.getInstance().getSectors();
-        this.modifiedSectors = new ArrayList<>();
-    }
-    /**
-     * Constructor de SectorAdapter. Inicializa el array desde SectorRepository.
      * Se llama cuando SectorActivity se ejecute por primera vez.
      */
     public SectorAdapter() {
         sectors = SectorRepository.getInstance().getSectors();
         this.modifiedSectors = new ArrayList<>();
+        onSwitchCheckedChangedListener = new OnSwitchCheckedChangedListener();
     }
-
+    /**
+     * Constructor de SectorAdapter. Inicializa el array desde SectorRepository.
+     * Se llama cuando SectorActivity se haya recreado desde un cambio de configuración,
+     * habiendo salvado su estado dinámico.
+     * @param modifiedSectors ArrayList de objetos Parcelable
+     */
+    public SectorAdapter(ArrayList<Sector> modifiedSectors) {
+        sectors = SectorRepository.getInstance().getSectors();
+        this.modifiedSectors = modifiedSectors;
+        onSwitchCheckedChangedListener = new OnSwitchCheckedChangedListener();
+    }
 
     /**
      * Infla la vista y crea en memoria el objeto ViewHolder.
@@ -80,10 +81,18 @@ public class SectorAdapter extends RecyclerView.Adapter<SectorAdapter.SectorView
      * @param position
      */
     @Override
-    public void onBindViewHolder(SectorViewHolder sectorViewHolder, int position) {
+    public void onBindViewHolder(final SectorViewHolder sectorViewHolder, int position) {
         sectorViewHolder.swtEnabled.setChecked(sectors.get(position).isEnabled());
+        sectorViewHolder.swtEnabled.setTag(sectors.get(position));
+
         sectorViewHolder.txvName.setText(sectors.get(position).getShortname());
         sectorViewHolder.swtEnabled.setOnCheckedChangeListener(onSwitchCheckedChangedListener);
+        /*sectorViewHolder.swtEnabled.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                sectors.get(sectorViewHolder.getAdapterPosition()).setEnabled(isChecked);
+            }
+        });*/
         if(sectors.get(position).isDefault())
             sectorViewHolder.txvSectorDefault.setText(R.string.txvSectorDefault);
     }
@@ -132,9 +141,7 @@ public class SectorAdapter extends RecyclerView.Adapter<SectorAdapter.SectorView
     private class OnSwitchCheckedChangedListener implements CompoundButton.OnCheckedChangeListener{
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            //if(isChecked)
-                //((Switch) buttonView)
-                //ob() enabled = !enabled
+            ((Sector) buttonView.getTag()).setEnabled(isChecked);
         }
     }
 }

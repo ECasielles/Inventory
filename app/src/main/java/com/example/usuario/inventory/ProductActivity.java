@@ -11,7 +11,6 @@ import android.os.Bundle;
  * @see android.app.Activity
  * @see AppCompatActivity
  */
-
 public class ProductActivity extends AppCompatActivity {
 
     @Override

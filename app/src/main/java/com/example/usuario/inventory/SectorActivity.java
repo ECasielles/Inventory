@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 
 import com.example.usuario.inventory.adapter.SectorAdapter;
+import com.example.usuario.inventory.pojo.Sector;
 
 /**
  * Actividad que maneja el alta de secciones
@@ -29,11 +30,10 @@ public class SectorActivity extends AppCompatActivity {
         recyclerSector = (RecyclerView) findViewById(R.id.rvwSector);
 
         //Se comprueba si viene de un estado anterior
-        if(savedInstanceState != null) {
-            //En caso de que no se tenga un constructor de Parcelable
-            //sectorAdapter = new SectorAdapter(savedInstanceState.<Sector>getParcelableArrayList("sector"));
-            sectorAdapter = new SectorAdapter(savedInstanceState.getParcelableArrayList("sector"));
-        } else
+        if(savedInstanceState != null)
+            //En caso de que no se tenga un constructor de Parcelable se añade <Sector>
+            sectorAdapter = new SectorAdapter(savedInstanceState.<Sector>getParcelableArrayList("sector"));
+        else
             sectorAdapter = new SectorAdapter();
 
         //Indicamos el tipo de LayoutManager
@@ -41,7 +41,7 @@ public class SectorActivity extends AppCompatActivity {
         //Pone los elementos en 2 columnas
         //recyclerSector.setHasFixedSize(true);
         //recyclerSector.setLayoutManager(new GridLayoutManager(this, 2));
-        //Del tirón
+        //...del tirón...
         recyclerSector.setLayoutManager(new GridLayoutManager(this, sectorAdapter.getItemCount()));
         recyclerSector.setAdapter(sectorAdapter);
     }

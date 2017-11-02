@@ -27,5 +27,13 @@
     <string name="txvPeripheral">Periférico</string>
     <string name="txvId">Id</string>
     <string name="txvSectorDefault">Default</string>
-    <string name="menuTitle">Guardar</string>
+    <string name="action_save">Guardar</string>
+
+    <!--ACCIONES APPBAR-TOOLBAR-FLOATING BUTTON-->
+    <string name="action_general_settings">Ajustes generales</string>
+    <string name="action_account_settings">Ajustes de cuenta</string>
+    <string name="pref_password_default"/>
+    <string name="pref_password_title">Contraseña</string>
+
+
 </resources>

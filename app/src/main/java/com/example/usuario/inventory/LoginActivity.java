@@ -20,7 +20,6 @@ import android.widget.TextView;
  * @see android.app.Activity
  * @see AppCompatActivity
  */
-
 public class LoginActivity extends AppCompatActivity {
 
     private TextView txvSignUp;
